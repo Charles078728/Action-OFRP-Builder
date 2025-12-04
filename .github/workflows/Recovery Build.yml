@@ -103,7 +103,7 @@ jobs:
 
     - name: Clone device tree
       run: |
-        cd ${{ steps.pwd.outputs.workspace-folder }}/${{ github.event.inputs.DEVICE_TREE_BRANCH }}
+        cd ${{ steps.pwd.outputs.workspace-folder }}/fox${{ github.event.inputs.MANIFEST_BRACH }}
         git clone ${{ github.event.inputs.DEVICE_TREE_URL }} -b ${{ github.event.inputs.DEVICE_TREE_BRANCH }} ./${{ github.event.inputs.DEVICE_PATH }}
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
